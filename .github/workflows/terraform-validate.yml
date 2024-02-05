@@ -1,0 +1,18 @@
+name: 'Terraform Validate'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release
+      - develop
+  pull_request:
+
+jobs:
+  Terraform-Validate:
+    - name: "Terraform Validate"
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        - name: 
